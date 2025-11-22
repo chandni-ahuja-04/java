@@ -25,10 +25,10 @@ jobs:
       - name: Compile Java and create JAR
         run: |
           mkdir -p out
-          javac -d out Hello.java
+          javac -d out hello.java
           echo "Main-Class: hello" > manifest.txt
           printf "\n" >> manifest.txt
-          jar cfm Hello.jar manifest.txt -C out .
+          jar cfm hello.jar manifest.txt -C out .
 
       - name: Configure AWS credentials (OIDC)
         uses: aws-actions/configure-aws-credentials@v4
