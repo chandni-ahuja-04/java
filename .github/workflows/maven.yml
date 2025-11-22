@@ -23,7 +23,7 @@ jobs:
       - name: Compile Java file
         run: |
           mkdir -p out
-          javac -d out hello.java
+          javac -d out Hello.java
 
       - name: Create Manifest file
         run: |
